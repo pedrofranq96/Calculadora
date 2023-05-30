@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Documentação da Calculadora em React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta é a documentação para uma calculadora em React inspirada na calculadora do iPhone. O projeto foi desenvolvido usando componentes React e estilos CSS para criar uma interface de usuário interativa e responsiva. A calculadora possui funcionalidades básicas de uma calculadora, incluindo operações matemáticas simples e a capacidade de limpar a tela.
 
-## Available Scripts
+## Configuração do Projeto
 
-In the project directory, you can run:
+Siga as etapas abaixo para configurar e executar o projeto da calculadora em seu ambiente de desenvolvimento.
 
-### `npm start`
+### Pré-requisitos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Certifique-se de ter os seguintes softwares instalados em seu sistema:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js (versão 12 ou superior)
+- NPM (gerenciador de pacotes do Node.js)
 
-### `npm test`
+### Instalação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone o repositório do projeto para o seu diretório local:
 
-### `npm run build`
+   ```bash
+   git clone <URL_DO_REPOSITÓRIO>
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navegue até o diretório do projeto:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   cd calculadora-react
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Instale as dependências do projeto:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Executando o Projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Após concluir a instalação, execute o projeto da calculadora usando o seguinte comando:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O projeto será compilado e iniciará em um servidor de desenvolvimento local. Abra o navegador e acesse `http://localhost:3000` para ver a calculadora em ação.
 
-## Learn More
+## Estrutura do Projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A estrutura do projeto é organizada da seguinte maneira:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+calculadora/
+  ├── src/
+  │   ├── components/
+  │   │   ├── Button.jsx
+  │   │   ├── Button.css
+  │   │   ├── Display.jsx
+  │   │   |── Display.css
+  |   ├── fonts/
+  |   |   ├── Roboto-Thin.ttf
+  |   ├── main/
+  |   |   ├── Calculator.css
+  |   |   ├── Calculator.jsx
+  │   ├── App.css
+  │   ├── App.js
+  │   ├── index.css
+  │   └── index.js
+  ├── .gitignore
+  ├── package.json
+  ├── package-lock.json
+  ├── README.md
+  └── ...
+```
 
-### Code Splitting
+A pasta `src` contém todos os componentes React e arquivos de estilo CSS relacionados ao projeto. Os principais arquivos são:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `Button.jsx`: Componente para representar os botões da calculadora.
+- `Calculator.jsx`: Componente principal da calculadora, que inclui a lógica para lidar com as operações matemáticas.
+- `Display.jsx`: Componente para exibir o valor atual na tela da calculadora.
+- `App.jsx`: Componente raiz do aplicativo React que renderiza a calculadora.
+- `index.jsx`: Arquivo de ponto de entrada para a aplicação React.
 
-### Analyzing the Bundle Size
+## Personalizando a Calculadora
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Você pode personalizar a aparência ou adicionar novos recursos à calculadora modificando os componentes existentes ou criando novos componentes. Os arquivos de estilo CSS também podem ser editados para alterar a aparência da calculadora.
 
-### Making a Progressive Web App
+## Considerações Finais
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Esta documentação forneceu uma visão geral do projeto da calculadora em React inspirada na calculadora do iPhone. Com esta calculadora como ponto de partida, você pode explorar e expandir as funcionalidades para criar uma calculadora mais avançada ou adaptá-la para suas necessidades específicas.
