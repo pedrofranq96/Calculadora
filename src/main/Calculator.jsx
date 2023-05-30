@@ -16,22 +16,52 @@ export default class Calculator extends Component {
 
     state = {...initialState}
 
-    constructor(props){
+    constructor(props){        
         super(props)
+
         this.clearMemory = this.clearMemory.bind(this)
         this.setOperation = this.setOperation.bind(this)
         this.addDigit = this.addDigit.bind(this)
     }
 
     clearMemory(){
+
         this.setState({ ...initialState })
     }
 
     setOperation(operation){
 
+        if(this.state.current === 0){
+            this.setState({operation, current: 1, clearDisplay: true})
+        } else {
+            const equals = operation === '='
+            const currentOperation = this.state.operation
+
+            const values = [...this.state.values]
+            try{
+                values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)
+                if (isNaN(values[0]) || !isFinite(values[0])) {
+                    this.clearMemory()
+                return
+                }
+            } catch(e){
+                values[0] = this.state.values[0]
+            }
+
+            values[1] = 0
+
+            this.setState({
+                displayValue: values[0],
+                operation: equals ? null : operation,
+                current: equals ? 0 : 1,
+                clearDisplay: !equals,
+                values
+            })
+        }
     }
 
     addDigit(n){
+
         if(n === '.' && this.state.displayValue.includes('.')){
             return
         }
@@ -52,9 +82,7 @@ export default class Calculator extends Component {
     }
 
 
-    render(){
-
-        
+    render(){      
        
         return (
             <div className="calculator">
